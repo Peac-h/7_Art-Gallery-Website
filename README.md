@@ -10,7 +10,7 @@ Built in accordance with given references. Fully responsive for all screen size 
 
 ## Checkout the live demo
 
-[Art gallery website]()
+[Art gallery website](https://peac-h.github.io/7_Art-Gallery-Website/)
 
 ## Built with
 
