@@ -1,0 +1,121 @@
+// color variables
+$color-gold: #d5966c;
+$color-black: #151515;
+$color-grey: #444;
+$color-cream: #fcfaf9;
+$color-white: #fff;
+
+// font variables
+$font-primary: "Big Shoulders Display", cursive;
+$font-secondary: "Outfit", sans-serif;
+$font-copyright: "Grape Nuts", cursive;
+
+// typography mixins
+// headings
+@mixin heading-xl {
+  font-family: $font-primary;
+  font-size: 9.6rem;
+  font-weight: 900;
+  line-height: 8.8rem;
+  text-transform: uppercase;
+}
+@mixin heading-l {
+  font-family: $font-primary;
+  font-size: 7rem;
+  font-weight: 900;
+  line-height: 7rem;
+  text-transform: uppercase;
+}
+@mixin heading-m {
+  font-family: $font-primary;
+  font-size: 6rem;
+  font-weight: 900;
+  line-height: 6rem;
+  text-transform: uppercase;
+}
+@mixin heading-s {
+  font-family: $font-primary;
+  font-size: 3.6rem;
+  font-weight: 900;
+  line-height: 3.6rem;
+  text-transform: uppercase;
+}
+
+// paragraphs
+@mixin paragraph-l {
+  font-weight: 300;
+  font-size: 2.2rem;
+  line-height: 3.2rem;
+}
+@mixin paragraph-m {
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+}
+@mixin typo-button {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 2.4rem;
+  letter-spacing: 3.64px;
+}
+
+// layout mixins
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+@mixin grid-col-main {
+  grid-template-columns:
+    [full-start] minmax(7rem, 1fr)
+    [center-start] minmax(min-content, 111rem)
+    [center-end] minmax(7rem, 1fr) [full-end];
+}
+@mixin grid-col-query {
+  grid-template-columns:
+    [full-start] minmax(3rem, 1fr)
+    [center-start] minmax(min-content, 111rem)
+    [center-end] minmax(3rem, 1fr) [full-end];
+}
+
+// responsive breakpoints
+$bp-largest: 72em; //// 1152px
+$bp-large: 62.5em; //// 1000px
+$bp-medium: 56.25em; // 900px
+$bp-small: 35em; ////// 560px
+$bp-smallest: 27em; ////// 432px
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 55%;
+  }
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: $font-secondary;
+  color: $color-grey;
+  @include paragraph-l;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: repeat(2, min-content) 24.4rem;
+  @include grid-col-main;
+
+  @media only screen and (max-width: $bp-small) {
+    grid-template-rows: repeat(2, min-content) 33.6rem;
+    background: $color-cream;
+  }
+}

@@ -1,0 +1,82 @@
+.button {
+  cursor: pointer;
+
+  .icon-to-right {
+    background: $color-gold;
+    padding: 2.4rem;
+    height: 7.2rem;
+    transition: background 1s;
+  }
+
+  .btn--dark {
+    background: $color-black;
+    justify-content: flex-end;
+  }
+
+  &:hover .icon-to-right {
+    background: $color-black;
+  }
+  &:hover .btn--dark {
+    background: $color-gold;
+  }
+}
+
+.location__button {
+  grid-column: 2;
+  grid-row: 1;
+  z-index: 10;
+  height: min-content;
+  width: max-content;
+
+  cursor: pointer;
+
+  .icon-to-left {
+    background: $color-black;
+    padding: 2.4rem;
+    height: 7.2rem;
+    transition: background 1s;
+  }
+
+  .btn--light {
+    background: $color-gold;
+  }
+
+  &:hover .icon-to-left {
+    background: $color-gold;
+  }
+  &:hover .btn--light {
+    background: $color-black;
+  }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  width: 26.4rem;
+
+  &:link,
+  &:visited {
+    text-decoration: none;
+    // padding: 2.4rem 3.2rem;
+    font-family: $font-primary;
+    @include typo-button;
+    text-transform: uppercase;
+    color: $color-white;
+    transition: background 1s;
+  }
+}
+
+.copyright {
+  grid-column: full-start / full-end;
+
+  font-family: $font-copyright;
+  font-size: 1.8rem;
+  text-align: end;
+  margin-right: 1rem;
+  color: $color-black;
+
+  a {
+    color: $color-gold;
+  }
+}
