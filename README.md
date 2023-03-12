@@ -12,6 +12,8 @@ Built in accordance with given references. Fully responsive for all screen size 
 
 [Art gallery website](https://peac-h.github.io/7_Art-Gallery-Website/)
 
+![Art gallery website](https://raw.githubusercontent.com/Peac-h/7_Art-Gallery-Website/main/Screenshot.png)
+
 ## Built with
 
 - html
